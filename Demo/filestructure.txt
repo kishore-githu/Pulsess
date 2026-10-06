@@ -1,0 +1,58 @@
+|-- .gitignore
+|-- AGENTS.md
+|-- CLAUDE.md
+|-- README.md
+|-- app
+    |-- api
+        |-- customers
+            |-- route.ts
+        |-- metrics
+            |-- route.ts
+        |-- transactions
+            |-- route.ts
+    |-- dashboard
+        |-- page.tsx
+    |-- favicon.ico
+    |-- globals.css
+    |-- icon.svg
+    |-- layout.tsx
+    |-- not-found.tsx
+    |-- page.tsx
+|-- components
+    |-- dashboard
+        |-- charts.tsx
+        |-- customers-panel.tsx
+        |-- dashboard-shell.tsx
+        |-- states.tsx
+        |-- transactions-panel.tsx
+        |-- use-resource.ts
+    |-- landing
+        |-- closing.tsx
+        |-- faq.tsx
+        |-- features.tsx
+        |-- footer.tsx
+        |-- header.tsx
+        |-- hero.tsx
+        |-- how-it-works.tsx
+        |-- live-tape.tsx
+        |-- logo-cloud.tsx
+        |-- pricing.tsx
+        |-- section.tsx
+        |-- showcase.tsx
+        |-- testimonials.tsx
+    |-- logo.tsx
+|-- eslint.config.mjs
+|-- lib
+    |-- api.ts
+    |-- format.ts
+    |-- ledger.ts
+    |-- site.ts
+    |-- types.ts
+|-- next-env.d.ts
+|-- next.config.ts
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.mjs
+|-- public
+|-- tsconfig.json
+|-- tsconfig.tsbuildinfo

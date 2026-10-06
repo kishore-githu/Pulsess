@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument), ui-serif, Georgia, "Times New Roman", serif;
+  --color-paper: #f3eee4;
+  --color-ink: #1a1714;
+  --color-muted: #655e54;
+  --color-line: #e3dacb;
+  --color-card: #fffdf8;
+  --color-pulse: #dc3b2c;
+  --color-pulse-dark: #8f2419;
+  --color-forest: #12382e;
+  --color-forest-mid: #1d5646;
+  --color-mist: #e4f2eb;
+  --color-sand: #efe4d0;
+  --color-amber: #8d5d16;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+::selection {
+  background: #12382e;
+  color: #f3eee4;
+}
+
+.hero-glow {
+  background:
+    radial-gradient(ellipse 42% 36% at 88% 8%, rgba(220, 59, 44, 0.09), transparent 62%),
+    radial-gradient(ellipse 36% 32% at 0% 80%, rgba(18, 56, 46, 0.07), transparent 70%);
+}
+
+.wave-path {
+  stroke-dasharray: 16 14;
+  animation: wave 2.8s linear infinite;
+}
+
+.live-dot {
+  box-shadow: 0 0 0 0 rgba(157, 222, 192, 0.7);
+  animation: blink 2.2s ease-in-out infinite;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #efe6d6 25%, #f8f3ea 37%, #efe6d6 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.page-btn {
+  height: 2.75rem;
+  border-radius: 999px;
+  padding-inline: 0.85rem;
+  font-size: 0.875rem;
+}
+
+.page-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.page-btn:not(:disabled):not([aria-current="page"]):hover {
+  background: #efe4d0;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  list-style: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 50;
+  border-radius: 999px;
+  background: #12382e;
+  color: #f3eee4;
+  padding: 0.6rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@keyframes wave {
+  to {
+    stroke-dashoffset: -300;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .wave-path,
+  .live-dot,
+  .skeleton {
+    animation: none;
+  }
+}
